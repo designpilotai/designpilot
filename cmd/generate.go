@@ -6,6 +6,7 @@ package cmd
 import (
 	"fmt"
 
+	"designpilot.ai/designpilot-cli/internal/env"
 	"github.com/spf13/cobra"
 )
 
@@ -18,12 +19,14 @@ var generateCmd = &cobra.Command{
 Example:
 designpilot generate --logo`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("generate called")
+		key := env.GetApiKey()
+		fmt.Println("Got API Key: ", key)
 	},
 }
 
 func init() {
 	rootCmd.AddCommand(generateCmd)
 
-	generateCmd.Flags().BoolP("logo", "l", false, "Generated asset will be a logo")
+	// generateCmd.Flags().BoolP("logo", "l", false, "Generated asset will be a logo")
+	generateCmd.Flags().StringP("prompt", "p", "", "Prompt for asset")
 }
