@@ -8,7 +8,7 @@ import (
 func GetApiKey() string {
 	key := os.Getenv("DESIGNPILOT_API_KEY")
 	if key == "" {
-		log.Fatalln("In order to use the CLI, you need to set the `DESIGNPILOT_API_KEY` environment variable. You can generate a key through the web app at designpilot.ai/profile")
+		log.Fatalln("In order to use the CLI, you need to set the `DESIGNPILOT_API_KEY` environment variable. You can generate a key through the web app at designpilot.ai/devtools")
 	}
 	return key
 }
