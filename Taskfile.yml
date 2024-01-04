@@ -6,3 +6,7 @@ tasks:
   build:
     cmds:
       - go build -trimpath
+
+  install:
+    cmds:
+      - go install
