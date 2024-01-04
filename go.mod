@@ -1,4 +1,4 @@
-module designpilot.ai/designpilot
+module designpilot.ai/cli/designpilot
 
 go 1.21.0
 

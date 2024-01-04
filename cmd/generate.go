@@ -10,8 +10,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"designpilot.ai/designpilot/internal/env"
-	"designpilot.ai/designpilot/internal/network"
+	"designpilot.ai/cli/designpilot/internal/env"
+	"designpilot.ai/cli/designpilot/internal/network"
 	"github.com/spf13/cobra"
 )
 
