@@ -24,6 +24,12 @@ var generateCmd = &cobra.Command{
 Example:
 designpilot generate -p="A pig in a teacup"`,
 	Run: func(cmd *cobra.Command, args []string) {
+		quiet := cmd.Flag("quiet").Value.String() == "true"
+
+		if !quiet {
+			fmt.Println("Reading API key...")
+		}
+
 		key := env.GetApiKey()
 		origin := env.GetOrigin()
 
@@ -53,6 +59,10 @@ designpilot generate -p="A pig in a teacup"`,
 
 		httpClient := network.HttpClient()
 
+		if !quiet {
+			fmt.Println("Making request to server...")
+		}
+
 		resp, err := httpClient.Do(req)
 		if err != nil {
 			log.Fatalln(err)
@@ -68,6 +78,10 @@ designpilot generate -p="A pig in a teacup"`,
 			log.Fatalln(err)
 		}
 
+		if !quiet {
+			fmt.Println("All done! Get you image here ↓ Tip: replace 'fullres' with '256' for a low-res version.")
+		}
+
 		fmt.Println(origin + string(bytes))
 	},
 }
@@ -77,4 +91,5 @@ func init() {
 
 	generateCmd.Flags().BoolP("logo", "l", false, "Generated asset will be a logo")
 	generateCmd.Flags().StringP("prompt", "p", "", "Prompt for asset")
+	generateCmd.Flags().BoolP("quiet", "q", false, "Disables status logs")
 }
