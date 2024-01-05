@@ -6,13 +6,17 @@ This is the codebase for the Design Pilot CLI, which can be used to interact wit
 
 ### Generate an image
 
-`designpilot generate --prompt="A pig in a teacup"`
+```shell
+designpilot generate --prompt="A pig in a teacup"
+```
 
 ![pig in a teacup](http://localhost:3000/content/asset/30c996f8-c162-4350-b130-763c45836552/fullres)
 
 ### Generate a logo
 
-`designpilot generate -p="A pig in a teacup" --logo`
+```shell
+designpilot generate -p="A pig in a teacup" --logo
+```
 
 ![pig in a teacup logo](http://localhost:3000/content/logo/a9fceb90-ef2f-47e7-a4ac-6cca256f3092/fullres)
 
@@ -35,4 +39,8 @@ If there is no release for your OS, you may have to use option 2:
 #### Option 2: Install using the Go toolchain
 
 1. [Install the Go toolchain](https://go.dev/doc/install)
-1. `go install github.com/designpilotai/designpilot`
+1. Install designpilot
+
+```shell
+go install github.com/designpilotai/designpilot
+```
