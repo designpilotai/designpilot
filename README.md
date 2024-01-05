@@ -10,7 +10,7 @@ This is the codebase for the Design Pilot CLI, which can be used to interact wit
 designpilot generate --prompt="A pig in a teacup"
 ```
 
-![pig in a teacup](http://localhost:3000/content/asset/30c996f8-c162-4350-b130-763c45836552/fullres)
+![pig in a teacup](https://github.com/designpilotai/designpilot/assets/80828305/aa084ead-0420-49be-831c-5e2e2f38a9c3)
 
 ### Generate a logo
 
@@ -18,7 +18,7 @@ designpilot generate --prompt="A pig in a teacup"
 designpilot generate -p="A pig in a teacup" --logo
 ```
 
-![pig in a teacup logo](http://localhost:3000/content/logo/a9fceb90-ef2f-47e7-a4ac-6cca256f3092/fullres)
+![pig in a teacup logo](https://github.com/designpilotai/designpilot/assets/80828305/379b86c5-3397-4edc-8f56-9f3b02edfef8)
 
 ## Setup
 
