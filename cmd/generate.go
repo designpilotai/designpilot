@@ -1,6 +1,4 @@
-/*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-*/package cmd
+package cmd
 
 import (
 	"bytes"
@@ -10,12 +8,11 @@ import (
 	"net/http"
 	"net/url"
 
-	"designpilot.ai/cli/designpilot/internal/env"
-	"designpilot.ai/cli/designpilot/internal/network"
+	"github.com/designpilotai/designpilot/internal/env"
+	"github.com/designpilotai/designpilot/internal/network"
 	"github.com/spf13/cobra"
 )
 
-// generateCmd represents the generate command
 var generateCmd = &cobra.Command{
 	Use:   "generate",
 	Short: "Generate assets using Design Pilot.",
