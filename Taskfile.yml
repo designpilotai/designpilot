@@ -5,7 +5,11 @@ version: "3"
 tasks:
   build:
     cmds:
-      - go build -trimpath
+      - GOOS=linux GOARCH=amd64 go build -trimpath -o ./build/designpilot_linux_64bit
+      - GOOS=linux GOARCH=386 go build -trimpath -o ./build/designpilot_linux_32bit
+      - GOOS=windows GOARCH=amd64 go build -trimpath -o ./build/designpilot_windows_64bit.exe
+      - GOOS=windows GOARCH=386 go build -trimpath -o ./build/designpilot_windows_32bit.exe
+      - GOOS=darwin GOARCH=amd64 go build -trimpath -o ./build/designpilot_mac_64bit
 
   install:
     cmds:
