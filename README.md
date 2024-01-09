@@ -26,15 +26,19 @@ designpilot generate -p="A pig in a teacup" --logo
 
 1. Purchase a Design Pilot Premium Subscription.
 1. Generate an API key on [the devtools page](https://designpilot.ai/devtools). If you lose it you can always delete it and generate a new one.
-1. Store your API key locally as an environment variable: `DESIGNPILOT_API_KEY`
+1. Store your API key locally as an [environment variable](https://chlee.co/how-to-setup-environment-variables-for-windows-mac-and-linux/): `DESIGNPILOT_API_KEY`
 
 ### Installation
 
+If you already have Go installed, [Option 2](#option-2-install-using-the-go-toolchain) will probably be quickest
+
 #### Option 1: Download a prebuilt binary
 
-1. Go to our [releases](https://github.com/designpilotai/designpilot/releases) and download the version for your OS.
+If there is no release for your OS, you may have to use [Option 2](#option-2-install-using-the-go-toolchain).
 
-If there is no release for your OS, you may have to use option 2:
+1. Go to our [releases](https://github.com/designpilotai/designpilot/releases) and download the version for your OS.
+1. Rename the file to designpilot
+1. Put it in your custom scripts folder (if you don't have one check [this](https://zwbetz.com/how-to-add-a-binary-to-your-path-on-macos-linux-windows/))
 
 #### Option 2: Install using the Go toolchain
 
@@ -42,5 +46,5 @@ If there is no release for your OS, you may have to use option 2:
 1. Install designpilot
 
 ```shell
-go install github.com/designpilotai/designpilot
+go install github.com/designpilotai/designpilot@latest
 ```
