@@ -9,7 +9,6 @@ import (
 	"net/url"
 
 	"github.com/designpilotai/designpilot/internal/env"
-	"github.com/designpilotai/designpilot/internal/network"
 	"github.com/spf13/cobra"
 )
 
@@ -54,13 +53,11 @@ designpilot generate -p="A pig in a teacup"`,
 		req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 		req.Header.Set("Authorization", "Bearer "+key)
 
-		httpClient := network.HttpClient()
-
 		if !quiet {
 			fmt.Println("Making request to server...")
 		}
 
-		resp, err := httpClient.Do(req)
+		resp, err := http.DefaultClient.Do(req)
 		if err != nil {
 			log.Fatalln(err)
 		}
